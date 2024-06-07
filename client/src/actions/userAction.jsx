@@ -3,7 +3,7 @@ export const registerUser = (user) => async (dispatch) => {
   dispatch({ type: "USER_REGISTER_REQUEST" });
   try {
     const response = await axios.post(
-      "https://b613090d-2c6f-40c7-b9ec-e422643b6202-00-xss54i8vqm9n.pike.repl.co/api/users/register",
+      "api/users/register",
       user,
     );
     console.log(response);
@@ -16,7 +16,7 @@ export const loginUser = (user) => async (dispatch) => {
   dispatch({ type: "USER_LOGIN_REQUEST" });
   try {
     const response = await axios.post(
-      "https://b613090d-2c6f-40c7-b9ec-e422643b6202-00-xss54i8vqm9n.pike.repl.co/api/users/login",
+      "api/users/login",
       user,
     );
     console.log(response);
@@ -37,7 +37,7 @@ export const getAllUsers = () => async (dispatch) => {
   dispatch({ type: "GET_USERS_REQUEST" });
   try {
     const response = await axios.get(
-      "https://b613090d-2c6f-40c7-b9ec-e422643b6202-00-xss54i8vqm9n.pike.repl.co/api/users/getallusers",
+      "api/users/getallusers",
     );
     console.log(response);
     dispatch({ type: "GET_USERS_SUCCESS", payload: response.data });
@@ -49,7 +49,7 @@ export const getAllUsers = () => async (dispatch) => {
 export const deletedUser = (userid) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "https://b613090d-2c6f-40c7-b9ec-e422643b6202-00-xss54i8vqm9n.pike.repl.co/api/users/deleteuser",
+      "api/users/deleteuser",
       { userid },
     );
     alert("user deleted successfully");
