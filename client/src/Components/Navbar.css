@@ -1,0 +1,17 @@
+.navigator2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0px 15px;
+}
+.title a {
+  font-size: 1.9rem;
+  font-weight: bolder;
+}
+.options {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+}
